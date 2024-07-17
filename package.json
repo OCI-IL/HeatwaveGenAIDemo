@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "FSGenAiDemo1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "concurrently": "^8.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "scripts": {
+    "start": "concurrently \"yarn workspace frontend start\" \"yarn workspace backend start\"",
+    "build": "yarn workspace frontend build && tsc -p tsconfig.backend.json",
+    "backend": "ts-node src/backend/index.ts",
+    "frontend": "cd src/frontend && yarn start"
+  },
+  "workspaces": [
+    "src/frontend",
+    "src/backend"
+  ]
+}
