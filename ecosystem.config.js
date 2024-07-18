@@ -10,7 +10,7 @@ module.exports = {
     },
     {
       name: "backend",
-      script: "PORT=3001 src/backend/react-scripts start",
+      script: "cd src/backend && yarn start",
       watch: true,
       env: {
         NODE_ENV: "production",
