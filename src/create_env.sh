@@ -16,11 +16,14 @@ collect_input DB_IP "Enter the DB_IP: "
 collect_input DB_USER "Enter the DB_USER: "
 collect_input DB_PASSWORD "Enter the DB_PASSWORD: "
 collect_input DB_NAME "Enter the DB_NAME: "
-collect_input REACT_APP_PAR "Enter the REACT_APP_PAR: "
+collect_input PAR_DB "Enter the PAR_DB: "
+collect_input REACT_APP_PAR_WEB "Enter the REACT_APP_PAR_WEB: "
+
 
 # Creating the .env file content for frontend and backend
-frontend_env_content="REACT_APP_PAR=${REACT_APP_PAR}"
+frontend_env_content="REACT_APP_PAR=${REACT_APP_PAR_WEB}"
 backend_env_content="PORT=${PORT}
+PAR_DB=${PAR_DB}
 DB_IP=${DB_IP}
 DB_USER=${DB_USER}
 DB_PASSWORD=${DB_PASSWORD}

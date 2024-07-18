@@ -94,9 +94,12 @@ export const embedEnDocs = async (): Promise<any> => {
     `drop table IF EXISTS quickstart_embeddings;`
   );
 
-  const [rows3] = await connection.execute(
-    `SET @dl_tables = '[{ "db_name": "quickstart_db", "tables": [{ "table_name": "quickstart_embeddings", "dialect": { "format": "pdf" }, "file": [{ "par": "https://objectstorage.il-jerusalem-1.oraclecloud.com/p/BNySmWgkewKrVqY9Wd-UcCXiVdxR0L-unxkvAjBfXqV2zOtHlwkWcVnLT0h_dQfR/n/oraseemeail/b/genai/o/" }] }] }]';`
-  );
+  const PAR = process.env.PAR_DB;
+  const setDlTables = `SET @dl_tables = '[{ "db_name": "quickstart_db", "tables": [{ "table_name": "quickstart_embeddings", "dialect": { "format": "pdf" }, "file": [{ "par": "${PAR}" }] }] }]';`;
+
+  console.log("setDlTables", setDlTables);
+
+  const [rows3] = await connection.execute(setDlTables);
 
   const [options] = await connection.execute(
     `SET @options = JSON_OBJECT( 'output', 'normal', 'policy', 'disable_unsupported_columns', 'external_tables', CAST(@dl_tables AS JSON) );`
