@@ -9,7 +9,8 @@ export default function Search() {
     console.log("Submitted", values);
 
     setIsSearching(true);
-    fetch("http://localhost:3003/search", {
+    fetch(`http://${window.location.hostname}:3003/search`, {
+      //fetch("http://localhost:3003/search", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {

@@ -13,9 +13,12 @@ export const Embedd: React.FC<EmbeddProps> = ({ onDone }) => {
 
   const onEmbedClicked = async () => {
     setRunning(true);
-    const response = await fetch("http://localhost:3003/embedPdf", {
-      method: "GET",
-    });
+    const response = await fetch(
+      `http://${window.location.hostname}:3003/embedPdf`,
+      {
+        method: "GET",
+      }
+    );
 
     const data = await response.json();
     console.log(data);
