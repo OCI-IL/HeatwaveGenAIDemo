@@ -6,7 +6,7 @@ this demo RAG on HeatWave GenAI
 
 - **Prerequisites:**
   1. OCI Account [(Click here to SignUp)](https://www.oracle.com/il-en/cloud/free/) / [(Click Here to Login)](https://www.oracle.com/cloud/sign-in.html)
-  2. VCN [(Click here to learn how)](/VCN.md)
+  2. VCN [(Click here to learn how)](/VCN.MD)
   3. Compute Instance [(Click here learn how)](/compute.md)
   4. Heatwave DB Instance [(Click here learn how)](/heatwave.md)
   5. Object storage bucket with PAR. [(Click here learn how)](/bucket.md)
