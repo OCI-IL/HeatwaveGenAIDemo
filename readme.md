@@ -6,16 +6,12 @@ this demo RAG on HeatWave GenAI
 
 - **Prerequisites:**
   1. OCI Account [(Click here to SignUp)](https://www.oracle.com/il-en/cloud/free/) / [(Click Here to Login)](https://www.oracle.com/cloud/sign-in.html)
-  2. VCN [(Click here to create)](/VCN.md)
-  3. Instance [(Click here to create)](/compute.md)
+  2. VCN [(Click here to learn how)](/VCN.md)
+  3. Compute Instance [(Click here learn how)](/compute.md)
+  4. Heatwave DB Instance [(Click here learn how)](/heatwave.md)
 
 # steps:
 
-1. Create an OCI account:
-
-2. create vcn
-3. open fw rules
-4. create instance
 5. connect to instance - sh -i ~/ssh/june.key opc@151.145.84.23
 6. Install Git -
    `sudo dnf install git -y`
