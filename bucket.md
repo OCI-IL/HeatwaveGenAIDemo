@@ -1,4 +1,4 @@
-# Creating buckets and PAR
+# Creating Bucket and PARs
 
 1. Click **Storage** &rarr; **Object Storage & Archive Storage** &rarr; **Buckets**
 
