@@ -93,7 +93,7 @@ this demo RAG on HeatWave GenAI
 
             curl http://localhost:3003/createDb
               ->> you should see good result
-            curl http://localhost:3001/createDb
+            curl http://localhost:3001/
               ->> you should see html
 
 1.  open the local linux firewall:
