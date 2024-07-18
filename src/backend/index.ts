@@ -1,5 +1,10 @@
 import express, { Request, Response } from "express";
-import { countEmbedding, embedEnDocs, performSearch } from "./heatwave_clt";
+import {
+  countEmbedding,
+  createDbIfnotExists,
+  embedEnDocs,
+  performSearch,
+} from "./heatwave_clt";
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -46,6 +51,16 @@ app.get("/embedPdf", async (req: Request, res: Response) => {
     const embeddingCount = await embedEnDocs();
     // Send the count as the response
     res.json({ count: embeddingCount });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+app.get("/createDb", async (req: Request, res: Response) => {
+  try {
+    const result = await createDbIfnotExists();
+
+    res.json({ result });
   } catch (error: any) {
     res.status(500).json({ error: error.message });
   }

@@ -37,7 +37,7 @@ export const performSearch = async (q: string): Promise<any> => {
 
   let output = "";
   const [rows3] = await connection.execute(
-    `SET @options_rag = JSON_OBJECT("vector_store", JSON_ARRAY("quickstart_db.quickstart_embeddings"));`
+    `SET @options_rag = JSON_OBJECT("vector_store", JSON_ARRAY("${process.env.DB_NAME}.quickstart_embeddings"));`
   );
 
   const [rows4] = await connection.execute<RowDataPacket[]>(
@@ -95,7 +95,7 @@ export const embedEnDocs = async (): Promise<any> => {
   );
 
   const PAR = process.env.PAR_DB;
-  const setDlTables = `SET @dl_tables = '[{ "db_name": "quickstart_db", "tables": [{ "table_name": "quickstart_embeddings", "dialect": { "format": "pdf" }, "file": [{ "par": "${PAR}" }] }] }]';`;
+  const setDlTables = `SET @dl_tables = '[{ "db_name": "${process.env.DB_NAME}", "tables": [{ "table_name": "quickstart_embeddings", "dialect": { "format": "pdf" }, "file": [{ "par": "${PAR}" }] }] }]';`;
 
   console.log("setDlTables", setDlTables);
 
@@ -114,4 +114,26 @@ export const embedEnDocs = async (): Promise<any> => {
   await connection.end();
 
   return await countEmbedding();
+};
+
+export const createDbIfnotExists = async (): Promise<any> => {
+  const connectionOptions = {
+    host: process.env.DB_IP,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    authPlugins: {
+      mysql_native_password: () => () => "your_password",
+    },
+  };
+
+  const connection = await mysql.createConnection(connectionOptions);
+
+  const [rows] = await connection.execute<RowDataPacket[]>(
+    `CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME};`
+  );
+  console.log("The result is:", rows);
+
+  await connection.end();
+
+  return rows;
 };
