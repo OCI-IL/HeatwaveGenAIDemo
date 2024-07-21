@@ -64,4 +64,16 @@ make sure to write down on the side the: private_ip, username, password
 
    ![drawing](./SS/heatwave/step17.png)
 
-1 Click **Create** to start the creation of the db
+1. Click **Create** to start the creation of the db
+
+1. Wait for the provisioning to complete
+
+   ![drawing](./SS/heatwave/step18.png)
+
+1. Scroll down and click on **EndPoints** on the left.
+
+   ![drawing](./SS/heatwave/step19.png)
+
+1. Copy the **Address** (private IP address)
+
+   ![drawing](./SS/heatwave/step20.png)
