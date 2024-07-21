@@ -82,7 +82,7 @@ export const embedEnDocs = async (): Promise<any> => {
 
   // Example query
   const [rows] = await connection.execute(
-    `SET @db_list = '["quickstart_db"]';`
+    `SET @db_list = '["${process.env.DB_NAME}"]';`
   );
 
   const [rows2] = await connection.execute(
