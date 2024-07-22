@@ -43,12 +43,12 @@
 
        ![drawing](./SS/vcn/open_port_5000.png)
 
-8.  Enter the following:
+    6. Enter the following:
 
-    1.  **Source Type:** Select CIDR
-    2.  **Source CIDR:** Enter 10.0.0.0/16
-    3.  **IP Protocol:** Select TCP
-    4.  **Destination Port Range:** Enter 3306
-    5.  Click **Save Changes**
+    7. **Source Type:** Select CIDR
+    8. **Source CIDR:** Enter 10.0.0.0/16
+    9. **IP Protocol:** Select TCP
+    10. **Destination Port Range:** Enter 3306
+    11. Click **Save Changes**
 
     ![drawing](./SS/vcn/open_port_5000.png)

@@ -15,7 +15,6 @@ PORT=3003
 collect_input DB_IP "Enter the DB_IP: "
 collect_input DB_USER "Enter the DB_USER: "
 collect_input DB_PASSWORD "Enter the DB_PASSWORD: "
-collect_input DB_NAME "Enter the DB_NAME: "
 collect_input PAR_DB "Enter the PAR_DB: "
 collect_input REACT_APP_PAR_WEB "Enter the REACT_APP_PAR_WEB: "
 
@@ -27,7 +26,7 @@ PAR_DB=${PAR_DB}
 DB_IP=${DB_IP}
 DB_USER=${DB_USER}
 DB_PASSWORD=${DB_PASSWORD}
-DB_NAME=${DB_NAME}"
+DB_NAME=hwgenai"
 
 # Define the directories
 frontend_dir="./frontend"
