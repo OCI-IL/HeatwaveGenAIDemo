@@ -34,7 +34,7 @@ this demo RAG on HeatWave GenAI
             exit
             ssh -a ...
 
-1.  Install NVM
+1.  Install node lTS
 
             nvm install --lts
 
@@ -96,7 +96,7 @@ this demo RAG on HeatWave GenAI
             curl http://localhost:3001/
               ->> you should see html
 
-1.  open the local linux firewall:
+1.  open the local Oracle linux firewall:
 
             sudo firewall-cmd --zone=public --permanent --add-port=3003/tcp
             sudo firewall-cmd --zone=public --permanent --add-port=3001/tcp
@@ -104,6 +104,8 @@ this demo RAG on HeatWave GenAI
 1.  commit the rules
 
             sudo firewall-cmd --reload
+
+    If your using ubuntu please follow this cheat sheet:https://bit.ly/OCI_OS_FW
 
 1.  Go back to Chrome and navigate to: http://{public_instance_ip}:3001
 
