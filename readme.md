@@ -105,7 +105,7 @@ this demo RAG on HeatWave GenAI
 
             sudo firewall-cmd --reload
 
-    If your using ubuntu please follow this cheat sheet:https://bit.ly/OCI_OS_FW
+    If your using Ubuntu please follow this cheat sheet:https://bit.ly/OCI_OS_FW
 
 1.  Go back to Chrome and navigate to: http://{public_instance_ip}:3001
 
