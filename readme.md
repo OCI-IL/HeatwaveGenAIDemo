@@ -1,7 +1,3 @@
-
-
-
-
 # Welcome to Heatwave Gen AI Demo
 
 ## !!! Work in progress !!!
