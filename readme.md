@@ -1,3 +1,7 @@
+
+
+
+
 # Welcome to Heatwave Gen AI Demo
 
 ## !!! Work in progress !!!
@@ -17,14 +21,14 @@ this demo RAG on HeatWave GenAI
 
             chmod 700  <your_ssh_key_path>.key
 
-1.  Connect to the compute instance you've created earlier today by running the following command on your shell:
+1.  Connect to the compute instance you created earlier today by running the following command on your shell:
 
             sudo ssh  -i <your_ssh_key_path>.key opc@<instance_ip>
 
-1.  After you connected to your machine, install git by running the following command:
+1.  After you connect to your machine, install git by running the following command:
 
             sudo dnf install git -y
-    * If your using Ubuntu please use **APT** packager manager
+    * If you are using Ubuntu, please use **APT** package manager
       ```bash
       sudo apt install git -y
       ```
@@ -56,7 +60,7 @@ this demo RAG on HeatWave GenAI
 
             git clone https://github.com/OCI-IL/HeatwaveGenAIDemo.git
 
-1.  Change to directory
+1.  Change to the directory
 
             cd HeatwaveGenAIDemo
 
@@ -68,7 +72,7 @@ this demo RAG on HeatWave GenAI
 
             cd src
 
-1.  Run the create_env scripts, the scripts will ask you for the params of the DB and the PARs for the DB and the frontend and will create .env files
+1.  Run the create_env scripts. The scripts will ask you for the params of the DB and the PARs for the DB and the frontend and will create .env files
 
             ./create_env.sh
 
@@ -87,7 +91,7 @@ this demo RAG on HeatWave GenAI
 
             pm2 startup systemd
 
-1.  The pm2 startup systemd command will generate a command that you need to run with sudo. It usually looks like this:
+1.  The pm2 startup systemd command will generate a command you must run with sudo. It usually looks like this:
 
             sudo env PATH=$PATH:/home/opc/.nvm/versions/node/v20.15.1/bin /home/opc/.nvm/versions/node/v20.15.1/lib/node_modules/pm2/bin/pm2 startup systemd -u opc --hp /home/opc
 
@@ -100,7 +104,7 @@ this demo RAG on HeatWave GenAI
             curl http://localhost:3001/
               ->> you should see html
 
-1.  open the local Oracle linux firewall:
+1.  open the local Oracle Linux firewall:
 
             sudo firewall-cmd --zone=public --permanent --add-port=3003/tcp
             sudo firewall-cmd --zone=public --permanent --add-port=3001/tcp
@@ -109,7 +113,7 @@ this demo RAG on HeatWave GenAI
 
             sudo firewall-cmd --reload
 
-    * If your using Ubuntu please follow this cheat sheet:https://bit.ly/OCI_OS_FW 
+    * If you are using Ubuntu, please follow this cheat sheet:https://bit.ly/OCI_OS_FW 
       ```bash
       sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3003 -j ACCEPT
       sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3001 -j ACCEPT
@@ -119,6 +123,6 @@ this demo RAG on HeatWave GenAI
 
 1.  Go back to Chrome and navigate to: http://{public_instance_ip}:3001
 
-1.  Upload a PDF file, run embed and enjoy exploring.
+1.  Upload a PDF file, run embed, and enjoy exploring.
 
-1.  With the trail account this setup can run for 30 days, until credits are expired. Please turn of the resources if you are not using it.
+1.  With the trial account, this setup can run for 30 days until credits expire. Please turn off the resources if you are not using them.
