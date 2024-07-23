@@ -24,6 +24,10 @@ this demo RAG on HeatWave GenAI
 1.  After you connected to your machine, install git by running the following command:
 
             sudo dnf install git -y
+    * If your using Ubuntu please use **APT** packager manager
+      ```bash
+      sudo apt install git -y
+      ```
 
 1.  Install nvm
 
@@ -105,7 +109,13 @@ this demo RAG on HeatWave GenAI
 
             sudo firewall-cmd --reload
 
-    If your using Ubuntu please follow this cheat sheet:https://bit.ly/OCI_OS_FW
+    * If your using Ubuntu please follow this cheat sheet:https://bit.ly/OCI_OS_FW 
+      ```bash
+      sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3003 -j ACCEPT
+      sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3001 -j ACCEPT
+      sudo netfilter-persistent save
+      ```
+
 
 1.  Go back to Chrome and navigate to: http://{public_instance_ip}:3001
 
