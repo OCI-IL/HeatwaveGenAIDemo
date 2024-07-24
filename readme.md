@@ -1,8 +1,18 @@
 # Welcome to Heatwave Gen AI Demo
 
-## !!! Work in progress !!!
+## !!! Work in progress
 
-this demo RAG on HeatWave GenAI
+Oracle HeatWave GenAI provides integrated and automated generative AI with in-database large language models (LLMs); an automated, in-database vector store; scale-out vector processing; and the ability to have contextual conversations in natural language—letting you take advantage of generative AI without AI expertise or data movement.
+
+To learn more about HeatWave - [Learn here](https://www.oracle.com/uk/heatwave/genai/) [technical brief](https://www.oracle.com/a/ocom/docs/heatwave-genai-technical-brief.pdf)
+
+This repo is contains a demo that showcase it's RAG feature. it is based on the getting start pdf [Download here](https://downloads.mysql.com/docs/heatwave-gen-ai-getting-started.en.pdf)
+
+By following this demo, in less than 1 Hour, you will be able to create a working RAG you can play with.
+
+Using the deployed Web app, you will be able to upload PDF to a bucket, run embedding to create vector from the PDF and ask questions about this db.
+
+This demo is using mistral-7b-instruct-v1 modal running inside Heatwave Cluster.
 
 - **Prerequisites:**
   1. OCI Account [(Click here to SignUp)](https://www.oracle.com/il-en/cloud/free/) / [(Click Here to Login)](https://www.oracle.com/cloud/sign-in.html)
@@ -24,7 +34,8 @@ this demo RAG on HeatWave GenAI
 1.  After you connect to your machine, install git by running the following command:
 
             sudo dnf install git -y
-    * If you are using Ubuntu, please use **APT** package manager
+
+    - If you are using Ubuntu, please use **APT** package manager
       ```bash
       sudo apt install git -y
       ```
@@ -109,13 +120,12 @@ this demo RAG on HeatWave GenAI
 
             sudo firewall-cmd --reload
 
-    * If you are using Ubuntu, please follow this cheat sheet:https://bit.ly/OCI_OS_FW 
+    - If you are using Ubuntu, please follow this cheat sheet:https://bit.ly/OCI_OS_FW
       ```bash
       sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3003 -j ACCEPT
       sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3001 -j ACCEPT
       sudo netfilter-persistent save
       ```
-
 
 1.  Go back to Chrome and navigate to: http://{public_instance_ip}:3001
 
