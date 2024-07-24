@@ -45,10 +45,10 @@ This demo is using mistral-7b-instruct-v1 modal running inside Heatwave Cluster.
 
             sudo dnf install git -y
 
-    - If you are using Ubuntu, please use **APT** package manager
-      ```bash
-      sudo apt install git -y
-      ```
+- If you are using Ubuntu, please use **APT** package manager
+  ```bash
+  sudo apt install git -y
+  ```
 
 1.  Install nvm
 
