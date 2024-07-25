@@ -4,13 +4,13 @@
 
 Oracle HeatWave GenAI provides integrated and automated generative AI with in-database large language models (LLMs); an automated, in-database vector store; scale-out vector processing; and the ability to have contextual conversations in natural language—letting you take advantage of generative AI without AI expertise or data movement.
 
-To learn more about HeatWave - [technical brief](https://www.oracle.com/a/ocom/docs/heatwave-genai-technical-brief.pdf)
+To learn more about HeatWave - [Technical Brief](https://www.oracle.com/a/ocom/docs/heatwave-genai-technical-brief.pdf)
 
-This repo is contains a demo that showcase it's RAG feature based on the getting start pdf [Download here](https://downloads.mysql.com/docs/heatwave-gen-ai-getting-started.en.pdf)
+This repository contains a demo showcasing its RAG feature based on the [Getting Started PDF](https://downloads.mysql.com/docs/heatwave-gen-ai-getting-started.en.pdf)
 
-By following this demo, in less than 1 Hour, you will be able to create a working RAG you can play with.
+By following this demo, you will be able to create a working RAG in less than an hour.
 
-Using the deployed Web app, you will be able to upload PDF to a bucket, run embedding to create vector from the PDF and ask questions about this db.
+With the deployed web app, you can upload PDFs to a bucket, run embeddings to create vectors from the PDFs, and ask questions about this database.
 
 ![drawing](./SS/app_screenshot1.png)
 
@@ -20,7 +20,7 @@ for example, in this screen shot i've embedded NBA rules and ask about them.
 
 This demo is using mistral-7b-instruct-v1 modal running inside Heatwave Cluster.
 
-\***\* this demo provide as is, and should be use on test env (separate VCN) with no access to prod env or propriety data \*\***
+\***\* This demo is provided as-is and should be used in a test environment (separate VCN) with no access to the production environment or proprietary data. \*\***
 
 [Learn here more about HeatWave](https://www.oracle.com/uk/heatwave/genai/)
 
