@@ -127,19 +127,22 @@ OCI Account [(Click here to SignUp)](https://www.oracle.com/il-en/cloud/free/) /
 
 1.  Run the output cmd by copy-paste
 
-1.  try to access the server locally
+1.  Try to access the server locally
 
             curl http://localhost:3003/createDb
               ->> you should see good result
+
+            If you get {"error":"connect ETIMEDOUT"} - Please go back to VCN step and verify that port 3306 is open in the security list for the local VCN
+
             curl http://localhost:3001/
               ->> you should see html
 
-1.  open the local Oracle Linux firewall:
+1.  Open the local Oracle Linux firewall:
 
             sudo firewall-cmd --zone=public --permanent --add-port=3003/tcp
             sudo firewall-cmd --zone=public --permanent --add-port=3001/tcp
 
-1.  commit the rules
+1.  Commit the rules
 
             sudo firewall-cmd --reload
 
