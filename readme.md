@@ -24,11 +24,9 @@ This demo is using mistral-7b-instruct-v1 modal running inside Heatwave Cluster.
 
 [Learn here more about HeatWave](https://www.oracle.com/uk/heatwave/genai/)
 
-## Disclaimer
+---
 
-This demo was built by John, an Oracle employee. However, it does not necessarily reflect the official policy or position of Oracle Corporation or its affiliates. The content provided is for informational purposes only and is not intended to provide any form of professional advice.
-
-## System Architection
+## System Architecture
 
 ![drawing](./SS/sys_arch.png)
 
@@ -158,3 +156,9 @@ OCI Account [(Click here to SignUp)](https://www.oracle.com/il-en/cloud/free/) /
 1.  Upload a PDF file, run embed, and enjoy exploring.
 
 1.  With the trial account, this setup can run for 30 days until credits expire. Please turn off the resources if you are not using them.
+
+---
+
+## Disclaimer
+
+This demo was built by Liron Sher, an Oracle employee. However, it does not necessarily reflect the official policy or position of Oracle Corporation or its affiliates. The content provided is for informational purposes only and is not intended to provide any form of professional advice.
