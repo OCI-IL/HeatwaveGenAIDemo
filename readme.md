@@ -1,6 +1,6 @@
 # Welcome to Heatwave Gen AI Demo
 
-## !!! Work in progress !!!
+## !!! Work in progress
 
 Oracle HeatWave GenAI provides integrated and automated generative AI with in-database large language models (LLMs); an automated, in-database vector store; scale-out vector processing; and the ability to have contextual conversations in natural language—letting you take advantage of generative AI without AI expertise or data movement.
 
@@ -24,14 +24,28 @@ This demo is using mistral-7b-instruct-v1 modal running inside Heatwave Cluster.
 
 [Learn here more about HeatWave](https://www.oracle.com/uk/heatwave/genai/)
 
-- **Prerequisites:**
-  1. OCI Account [(Click here to SignUp)](https://www.oracle.com/il-en/cloud/free/) / [(Click Here to Login)](https://www.oracle.com/cloud/sign-in.html)
-  2. VCN [(Click here to learn how to create)](/VCN.MD)
-  3. Compute Instance [(Click here learn how to create )](/compute.md)
-  4. Heatwave DB Instance [(Click here learn how to create )](/heatwave.md)
-  5. Object storage bucket with PAR. [(Click here learn how to create)](/bucket.md)
+## Disclaimer
 
-# steps:
+This demo was built by John, an Oracle employee. However, it does not necessarily reflect the official policy or position of Oracle Corporation or its affiliates. The content provided is for informational purposes only and is not intended to provide any form of professional advice.
+
+## System Architection
+
+![drawing](./SS/sys_arch.png)
+
+# **Prerequisites:**
+
+OCI Account [(Click here to SignUp)](https://www.oracle.com/il-en/cloud/free/) / [(Click Here to Login)](https://www.oracle.com/cloud/sign-in.html)
+
+# Steps (in OCI Console)
+
+1. [Create VCN](/VCN.MD)
+1. [Create Compute Instance](/compute.md)
+
+1. [Create Heatwave DB Instance](/heatwave.md)
+
+1. [Object Storage Bucket with 2 PARs](/bucket.md)
+
+# Steps (in Terminal / CMD)
 
 1.  Make sure your ssh key is secured [(Windows users)](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/connect-to-linux-instance.htm#linux-from-windows-openssh)
 
@@ -46,6 +60,7 @@ This demo is using mistral-7b-instruct-v1 modal running inside Heatwave Cluster.
             sudo dnf install git -y
 
 - If you are using Ubuntu, please use **APT** package manager
+
   ```bash
   sudo apt install git -y
   ```
@@ -130,7 +145,8 @@ This demo is using mistral-7b-instruct-v1 modal running inside Heatwave Cluster.
 
             sudo firewall-cmd --reload
 
-    - If you are using Ubuntu, please follow this cheat sheet:https://bit.ly/OCI_OS_FW
+    - If you are using Ubuntu, please follow this cheat sheet:<https://bit.ly/OCI_OS_FW>
+
       ```bash
       sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3003 -j ACCEPT
       sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3001 -j ACCEPT
